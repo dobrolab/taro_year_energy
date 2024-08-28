@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Энергии года - калькулятор | Таролог Keila Beila</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-3.5.1.slim.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script src="js/calc-yearenergy.js"></script>
+
+	<link rel="icon" href="favicon.ico"/>
+
+</head>
+
+<body>
+	
+	<header>
+		<div class="container">
+			<div class="h3"><a href="https://keilabeila.com/">&larr; НАЗАД</a></div>
+		</div>
+	</header>
+
+	<main class="manrope">
+
+		<div class="container">
+			<h1> Калькулятор Энергии Года </h1>
+		</div>
+
+		<!-- input -->
+		<section id="dainput" class="my-0">
+			<div class="container">
+
+				<div class="row g-4 mb-4">
+
+					<div class="col-lg-4 mb-2">
+						<h6>Выберите дату рождения (ДД-ММ-ГГГГ):</h6>
+						<div class="d-flex">
+							<div class="inputWrapper">
+									<input class="form-input" id="birthdate1" type="number" min="1" max="31" step="1" value="27"><br>
+									<!-- <label class="ps-4 small">* день</label> -->
+							</div>
+							<div class="inputWrapper">
+									<input class="form-input" id="birthmonth1" type="number" min="1" max="12" step="1" value="08"><br>
+									<!-- <label class="ps-4 small">* месяц</label> -->
+							</div>
+							<div class="inputWrapper">
+								<input class="form-input" id="birthyear1" type="number" min="0" step="1" value="1990"><br>
+								<!-- <label class="ps-4 small">* год</label> -->
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-lg-3 mb-2">
+						<h6>Выберите Год:</h6>
+						<div class="d-flex">
+							<div class="inputWrapper w-100">
+								<input class="form-input w-100" id="calcyear1" type="number" min="-10000" step="1" value="2024"><br>
+								<!-- <label>Год</label> -->
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-lg-4 offset-lg-1 mb-2">
+						<h6>Введите имя:</h6>
+						<div class="d-flex">
+							<div class="inputWrapper">
+									<input class="form-input w-100" id="username" type="text" placeholder="Альварес В." value="Альварес В."><br>
+									<!-- <label>Имя</label> -->
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="col-lg-4 text-center offset-lg-4">
+						<button class="calculate w-100" onclick="calculateSum()">Рассчитать
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M6.47998 20.3137L14.9325 11.9999L6.47998 3.68606L7.78534 2.3999L17.52 12.0047L7.78534 21.5999L6.47998 20.3137Z" fill="black"/> </svg>
+						</button>
+					</div>
+
+
+				</div>
+
+			</div>
+		</section> <!-- / input -->
+
+
+		<!-- table_result -->
+		<section id="level_01" class="mt-0">
+			<div class="container">
+
+				<h2>Результат расчёта</h2>
+
+				<!-- Month m01 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Январь </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card1">
+										<div class="ordernumber">1</div>
+										<div class="romulus" id="m01r1">—</div>
+										<div><img id="m01i01" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m01a01">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card3">
+										<div class="ordernumber">3</div>
+										<div class="romulus" id="m01r3">—</div>
+										<div><img id="m01i03" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m01a03">—</div>
+									</div>
+
+									<div class="tcard" id="card2">
+										<div class="ordernumber">2</div>
+										<div class="romulus" id="m01r2">—</div>
+										<div><img id="m01i02" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m01a02">—</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m01r4">—</div>
+										<div><img id="m01i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m01a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m01r6">—</div>
+										<div><img id="m01i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m01a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m01r5">—</div>
+										<div><img id="m01i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m01a05">—</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m02 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Февраль </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card1">
+										<div class="ordernumber">1</div>
+										<div class="romulus" id="m02r1">—</div>
+										<div><img id="m02i01" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m02a01">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card3">
+										<div class="ordernumber">3</div>
+										<div class="romulus" id="m02r3">—</div>
+										<div><img id="m02i03" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m02a03">—</div>
+									</div>
+
+									<div class="tcard" id="card2">
+										<div class="ordernumber">2</div>
+										<div class="romulus" id="m02r2">—</div>
+										<div><img id="m02i02" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m02a02">—</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m02r4">—</div>
+										<div><img id="m02i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m02a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m02r6">—</div>
+										<div><img id="m02i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m02a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m02r5">—</div>
+										<div><img id="m02i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m02a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m03 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Март </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+								<div class="tcard" id="card1">
+									<div class="ordernumber">1</div>
+									<div class="romulus" id="m03r1">—</div>
+									<div><img id="m03i01" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m03a01">—</div>
+								</div>
+
+								<div class="tcard mt-5" id="card3">
+									<div class="ordernumber">3</div>
+									<div class="romulus" id="m03r3">—</div>
+									<div><img id="m03i03" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m03a03">—</div>
+								</div>
+
+								<div class="tcard" id="card2">
+									<div class="ordernumber">2</div>
+									<div class="romulus" id="m03r2">—</div>
+									<div><img id="m03i02" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m03a02">—</div>
+								</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m03r4">—</div>
+										<div><img id="m03i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m03a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m03r6">—</div>
+										<div><img id="m03i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m03a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m03r5">—</div>
+										<div><img id="m03i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m03a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m04 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Апрель </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+								<div class="tcard" id="card1">
+									<div class="ordernumber">1</div>
+									<div class="romulus" id="m04r1">—</div>
+									<div><img id="m04i01" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m04a01">—</div>
+								</div>
+
+								<div class="tcard mt-5" id="card3">
+									<div class="ordernumber">3</div>
+									<div class="romulus" id="m04r3">—</div>
+									<div><img id="m04i03" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m04a03">—</div>
+								</div>
+
+								<div class="tcard" id="card2">
+									<div class="ordernumber">2</div>
+									<div class="romulus" id="m04r2">—</div>
+									<div><img id="m04i02" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m04a02">—</div>
+								</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m04r4">—</div>
+										<div><img id="m04i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m04a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m04r6">—</div>
+										<div><img id="m04i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m04a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m04r5">—</div>
+										<div><img id="m04i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m04a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m05 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Май </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+								<div class="tcard" id="card1">
+									<div class="ordernumber">1</div>
+									<div class="romulus" id="m05r1">—</div>
+									<div><img id="m05i01" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m05a01">—</div>
+								</div>
+
+								<div class="tcard mt-5" id="card3">
+									<div class="ordernumber">3</div>
+									<div class="romulus" id="m05r3">—</div>
+									<div><img id="m05i03" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m05a03">—</div>
+								</div>
+
+								<div class="tcard" id="card2">
+									<div class="ordernumber">2</div>
+									<div class="romulus" id="m05r2">—</div>
+									<div><img id="m05i02" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m05a02">—</div>
+								</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m05r4">—</div>
+										<div><img id="m05i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m05a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m05r6">—</div>
+										<div><img id="m05i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m05a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m05r5">—</div>
+										<div><img id="m05i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m05a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m06 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Июнь </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+								<div class="tcard" id="card1">
+									<div class="ordernumber">1</div>
+									<div class="romulus" id="m06r1">—</div>
+									<div><img id="m06i01" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m06a01">—</div>
+								</div>
+
+								<div class="tcard mt-5" id="card3">
+									<div class="ordernumber">3</div>
+									<div class="romulus" id="m06r3">—</div>
+									<div><img id="m06i03" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m06a03">—</div>
+								</div>
+
+								<div class="tcard" id="card2">
+									<div class="ordernumber">2</div>
+									<div class="romulus" id="m06r2">—</div>
+									<div><img id="m06i02" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m06a02">—</div>
+								</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m06r4">—</div>
+										<div><img id="m06i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m06a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m06r6">—</div>
+										<div><img id="m06i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m06a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m06r5">—</div>
+										<div><img id="m06i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m06a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m07 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Июль </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+								<div class="tcard" id="card1">
+									<div class="ordernumber">1</div>
+									<div class="romulus" id="m07r1">—</div>
+									<div><img id="m07i01" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m07a01">—</div>
+								</div>
+
+								<div class="tcard mt-5" id="card3">
+									<div class="ordernumber">3</div>
+									<div class="romulus" id="m07r3">—</div>
+									<div><img id="m07i03" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m07a03">—</div>
+								</div>
+
+								<div class="tcard" id="card2">
+									<div class="ordernumber">2</div>
+									<div class="romulus" id="m07r2">—</div>
+									<div><img id="m07i02" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m07a02">—</div>
+								</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m07r4">—</div>
+										<div><img id="m07i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m07a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m07r6">—</div>
+										<div><img id="m07i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m07a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m07r5">—</div>
+										<div><img id="m07i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m07a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m08 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Август </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+								<div class="tcard" id="card1">
+									<div class="ordernumber">1</div>
+									<div class="romulus" id="m08r1">—</div>
+									<div><img id="m08i01" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m08a01">—</div>
+								</div>
+
+								<div class="tcard mt-5" id="card3">
+									<div class="ordernumber">3</div>
+									<div class="romulus" id="m08r3">—</div>
+									<div><img id="m08i03" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m08a03">—</div>
+								</div>
+
+								<div class="tcard" id="card2">
+									<div class="ordernumber">2</div>
+									<div class="romulus" id="m08r2">—</div>
+									<div><img id="m08i02" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m08a02">—</div>
+								</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m08r4">—</div>
+										<div><img id="m08i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m08a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m08r6">—</div>
+										<div><img id="m08i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m08a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m08r5">—</div>
+										<div><img id="m08i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m08a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m09 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Сентябрь </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+								<div class="tcard" id="card1">
+									<div class="ordernumber">1</div>
+									<div class="romulus" id="m09r1">—</div>
+									<div><img id="m09i01" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m09a01">—</div>
+								</div>
+
+								<div class="tcard mt-5" id="card3">
+									<div class="ordernumber">3</div>
+									<div class="romulus" id="m09r3">—</div>
+									<div><img id="m09i03" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m09a03">—</div>
+								</div>
+
+								<div class="tcard" id="card2">
+									<div class="ordernumber">2</div>
+									<div class="romulus" id="m09r2">—</div>
+									<div><img id="m09i02" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m09a02">—</div>
+								</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m09r4">—</div>
+										<div><img id="m09i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m09a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m09r6">—</div>
+										<div><img id="m09i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m09a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m09r5">—</div>
+										<div><img id="m09i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m09a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m10 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Октябрь </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+								<div class="tcard" id="card1">
+									<div class="ordernumber">1</div>
+									<div class="romulus" id="m10r1">—</div>
+									<div><img id="m10i01" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m10a01">—</div>
+								</div>
+
+								<div class="tcard mt-5" id="card3">
+									<div class="ordernumber">3</div>
+									<div class="romulus" id="m10r3">—</div>
+									<div><img id="m10i03" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m10a03">—</div>
+								</div>
+
+								<div class="tcard" id="card2">
+									<div class="ordernumber">2</div>
+									<div class="romulus" id="m10r2">—</div>
+									<div><img id="m10i02" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m10a02">—</div>
+								</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m10r4">—</div>
+										<div><img id="m10i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m10a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m10r6">—</div>
+										<div><img id="m10i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m10a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m10r5">—</div>
+										<div><img id="m10i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m10a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m11 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Ноябрь </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+								<div class="tcard" id="card1">
+									<div class="ordernumber">1</div>
+									<div class="romulus" id="m11r1">—</div>
+									<div><img id="m11i01" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m11a01">—</div>
+								</div>
+
+								<div class="tcard mt-5" id="card3">
+									<div class="ordernumber">3</div>
+									<div class="romulus" id="m11r3">—</div>
+									<div><img id="m11i03" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m11a03">—</div>
+								</div>
+
+								<div class="tcard" id="card2">
+									<div class="ordernumber">2</div>
+									<div class="romulus" id="m11r2">—</div>
+									<div><img id="m11i02" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m11a02">—</div>
+								</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m11r4">—</div>
+										<div><img id="m11i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m11a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m11r6">—</div>
+										<div><img id="m11i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m11a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m11r5">—</div>
+										<div><img id="m11i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m11a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Month m12 -->
+				<div class="row">
+					<div class="col-lg-12 py-3 h3_month"> Февраль </div>
+					<div class="col-lg-10">
+						<div class="row g-0">
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Общие энергии</div>
+								<div class="table_cell">
+
+								<div class="tcard" id="card1">
+									<div class="ordernumber">1</div>
+									<div class="romulus" id="m12r1">—</div>
+									<div><img id="m12i01" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m12a01">—</div>
+								</div>
+
+								<div class="tcard mt-5" id="card3">
+									<div class="ordernumber">3</div>
+									<div class="romulus" id="m12r3">—</div>
+									<div><img id="m12i03" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m12a03">—</div>
+								</div>
+
+								<div class="tcard" id="card2">
+									<div class="ordernumber">2</div>
+									<div class="romulus" id="m12r2">—</div>
+									<div><img id="m12i02" src="img/card.jpg" class="cimg"></div>
+									<div class="rstring" id="m12a02">—</div>
+								</div>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="border_tlr px-3 py-1">Личные энергии</div>
+								<div class="table_cell">
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">4</div>
+										<div class="romulus" id="m12r4">—</div>
+										<div><img id="m12i04" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m12a04">—</div>
+									</div>
+
+									<div class="tcard mt-5" id="card6">
+										<div class="ordernumber">6</div>
+										<div class="romulus" id="m12r6">—</div>
+										<div><img id="m12i06" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m12a06">—</div>
+									</div>
+
+									<div class="tcard" id="card5">
+										<div class="ordernumber">5</div>
+										<div class="romulus" id="m12r5">—</div>
+										<div><img id="m12i05" src="img/card.jpg" class="cimg"></div>
+										<div class="rstring" id="m12a05">—</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section> <!-- / table_result -->
+
+
+
+	</main>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+.manrope {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.viaoda-libre-regular {
+  font-family: "Viaoda Libre", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #5F2630;
+  color: #fff;
+  padding-top: 76px;
+  min-width: 360px;
+}
+body h1, body h2, body h3 {
+  color: #C7AB77;
+  font-family: "Viaoda Libre", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+body p {
+  margin-bottom: 0;
+}
+
+header {
+  height: 76px;
+  background-color: #C7AB77;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+header .h3 a {
+  font-family: "Viaoda Libre", serif;
+  text-decoration: none;
+  color: #5F2630;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+main h1 {
+  margin-top: 60px;
+}
+
+section {
+  margin-top: 60px;
+}
+
+.border_tlr {
+  border: 1px solid #C7AB77;
+}
+
+#dainput {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+#dainput h5 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#dainput h6 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #C7AB77;
+}
+#dainput p {
+  margin-bottom: 20px;
+}
+#dainput label {
+  margin-bottom: 5px;
+}
+#dainput select, #dainput input {
+  font-size: 20px;
+  padding: 15px 20px;
+  background-color: #743944;
+  border: 1px solid #C7AB77;
+  border-radius: 15px;
+  margin-right: 15px;
+  color: #fff;
+}
+#dainput input {
+  padding: 14px 20px;
+  width: 100px;
+}
+#dainput .calculate {
+  margin-top: 20px;
+  background-color: rgb(199, 171, 119);
+  background-image: linear-gradient(110deg, rgb(221, 204, 173), rgb(199, 171, 119));
+  font-size: 17px;
+  padding: 16px 36px;
+  border-radius: 40px;
+  border: none;
+}
+#dainput .calculate:hover {
+  background: rgb(199, 171, 119);
+  cursor: pointer;
+}
+
+#level_01 .container {
+  background: transparent url("../img/taro_years_back.svg") repeat-y scroll top center/contain;
+}
+#level_01 .row .row {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.h3_month {
+  font-family: "Viaoda Libre", serif;
+  color: #C7AB77;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.table_cell {
+  border: 1px solid #C7AB77;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.astar {
+  position: relative;
+  display: inline-block;
+  width: 700px;
+  height: 800px;
+}
+.astar .tcard {
+  position: absolute;
+}
+
+.tcard {
+  transition: all 0.1s ease;
+  border: 1px solid #C7AB77;
+  background-color: #743944;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  padding: 5px;
+  border-radius: 10px;
+  width: 60px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.tcard:hover {
+  transform: scale(2);
+  z-index: 1;
+}
+.tcard.tcard_gray {
+  background-color: #C7AB77;
+  color: #5F2630;
+}
+.tcard.tcard_gray .ordernumber, .tcard.tcard_gray .romulus, .tcard.tcard_gray .rstring {
+  color: #5F2630;
+}
+.tcard .ordernumber {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 10px;
+  color: #C7AB77;
+  line-height: 7px;
+}
+.tcard .romulus {
+  font-size: 15px;
+  font-weight: bold;
+}
+.tcard .rstring {
+  font-size: 10px;
+}
+.tcard .cimg {
+  width: 38px;
+  height: 65px;
+  border-radius: 2px;
+}
+
+.mscale {
+  width: 350px;
+  height: 400px;
+}
+.mscale .astar {
+  transform: scale(0.7);
+  top: 0;
+  left: 0;
+  margin: -50%;
+}
+
+.results {
+  margin-top: 300px;
+}
+
+@media (max-width: 767px) {
+  #dainput {
+    padding-bottom: 0;
+  }
+  #dainput select, #dainput input {
+    font-size: 16px;
+  }
+  .btn_filter .axis {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .mscale {
+    width: 350px;
+    height: 400px;
+  }
+  .mscale .astar {
+    transform: scale(0.5);
+    top: 0;
+    left: 0;
+    margin: -50%;
+  }
+  .results {
+    margin-top: 100px;
+  }
+}/*# sourceMappingURL=styles.css.map */
