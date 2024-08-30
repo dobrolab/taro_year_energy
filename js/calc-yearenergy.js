@@ -60,7 +60,7 @@ function calculateSum() {
 		while ( rm01c04 > 22 ) { rm01c04 = rm01c04 - 22 };
 
 		// [5]
-		rm01c05 = birthyearsum;
+		rm01c05 = birthyearsum + yearsum;
 		while ( rm01c05 > 22 ) { rm01c05 = rm01c05 - 22 };
 
 		// [6]
@@ -113,7 +113,7 @@ function calculateSum() {
 		while ( rm02c04 > 22 ) { rm02c04 = rm02c04 - 22 };
 
 		// [5]
-		rm02c05 = birthyearsum;
+		rm02c05 = birthyearsum + yearsum;
 		while ( rm02c05 > 22 ) { rm02c05 = rm02c05 - 22 };
 
 		// [6]
@@ -166,7 +166,7 @@ function calculateSum() {
 		while ( rm03c04 > 22 ) { rm03c04 = rm03c04 - 22 };
 
 		// [5]
-		rm03c05 = birthyearsum;
+		rm03c05 = birthyearsum + yearsum;
 		while ( rm03c05 > 22 ) { rm03c05 = rm03c05 - 22 };
 
 		// [6]
@@ -219,7 +219,7 @@ function calculateSum() {
 		while ( rm04c04 > 22 ) { rm04c04 = rm04c04 - 22 };
 
 		// [5]
-		rm04c05 = birthyearsum;
+		rm04c05 = birthyearsum + yearsum;
 		while ( rm04c05 > 22 ) { rm04c05 = rm04c05 - 22 };
 
 		// [6]
@@ -272,7 +272,7 @@ function calculateSum() {
 		while ( rm05c04 > 22 ) { rm05c04 = rm05c04 - 22 };
 
 		// [5]
-		rm05c05 = birthyearsum;
+		rm05c05 = birthyearsum + yearsum;
 		while ( rm05c05 > 22 ) { rm05c05 = rm05c05 - 22 };
 
 		// [6]
@@ -325,7 +325,7 @@ function calculateSum() {
 		while ( rm06c04 > 22 ) { rm06c04 = rm06c04 - 22 };
 
 		// [5]
-		rm06c05 = birthyearsum;
+		rm06c05 = birthyearsum + yearsum;
 		while ( rm06c05 > 22 ) { rm06c05 = rm06c05 - 22 };
 
 		// [6]
@@ -378,7 +378,7 @@ function calculateSum() {
 		while ( rm07c04 > 22 ) { rm07c04 = rm07c04 - 22 };
 
 		// [5]
-		rm07c05 = birthyearsum;
+		rm07c05 = birthyearsum + yearsum;
 		while ( rm07c05 > 22 ) { rm07c05 = rm07c05 - 22 };
 
 		// [6]
@@ -431,7 +431,7 @@ function calculateSum() {
 		while ( rm08c04 > 22 ) { rm08c04 = rm08c04 - 22 };
 
 		// [5]
-		rm08c05 = birthyearsum;
+		rm08c05 = birthyearsum + yearsum;
 		while ( rm08c05 > 22 ) { rm08c05 = rm08c05 - 22 };
 
 		// [6]
@@ -484,7 +484,7 @@ function calculateSum() {
 		while ( rm09c04 > 22 ) { rm09c04 = rm09c04 - 22 };
 
 		// [5]
-		rm09c05 = birthyearsum;
+		rm09c05 = birthyearsum + yearsum;
 		while ( rm09c05 > 22 ) { rm09c05 = rm09c05 - 22 };
 
 		// [6]
@@ -537,7 +537,7 @@ function calculateSum() {
 		while ( rm10c04 > 22 ) { rm10c04 = rm10c04 - 22 };
 
 		// [5]
-		rm10c05 = birthyearsum;
+		rm10c05 = birthyearsum + yearsum;
 		while ( rm10c05 > 22 ) { rm10c05 = rm10c05 - 22 };
 
 		// [6]
@@ -590,7 +590,7 @@ function calculateSum() {
 		while ( rm11c04 > 22 ) { rm11c04 = rm11c04 - 22 };
 
 		// [5]
-		rm11c05 = birthyearsum;
+		rm11c05 = birthyearsum + yearsum;
 		while ( rm11c05 > 22 ) { rm11c05 = rm11c05 - 22 };
 
 		// [6]
@@ -643,7 +643,7 @@ function calculateSum() {
 		while ( rm12c04 > 22 ) { rm12c04 = rm12c04 - 22 };
 
 		// [5]
-		rm12c05 = birthyearsum;
+		rm12c05 = birthyearsum + yearsum;
 		while ( rm12c05 > 22 ) { rm12c05 = rm12c05 - 22 };
 
 		// [6]

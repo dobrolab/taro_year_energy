@@ -12,6 +12,9 @@ $c9: #fff
 	font-weight: 400
 	font-style: normal
 
+html
+	scroll-behavior: smooth !important
+
 body
 	background-color: $c0
 	color: $c9
@@ -108,11 +111,18 @@ footer
 			background: rgb(199, 171, 119)
 			cursor: pointer
 
+.btn_filter
+	display: flex
+	justify-content: space-between
+	a
+		color: #fff
+		text-decoration: none
+
 #level_01
 	.container
 		background: transparent url('../img/taro_years_back.svg') repeat-y scroll top center / contain
 
-	.row .row
+	.backdrop
 		backdrop-filter: blur(10px)
 		// background-color: $c0
 
@@ -155,7 +165,7 @@ footer
 	position: relative
 
 	&:hover
-		transform: scale(2)
+		transform: scale(1.5)
 		z-index: 1
 
 	&.tcard_gray

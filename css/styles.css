@@ -11,6 +11,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   background-color: #5F2630;
   color: #fff;
@@ -120,10 +124,19 @@ footer .h3 a {
   cursor: pointer;
 }
 
+.btn_filter {
+  display: flex;
+  justify-content: space-between;
+}
+.btn_filter a {
+  color: #fff;
+  text-decoration: none;
+}
+
 #level_01 .container {
   background: transparent url("../img/taro_years_back.svg") repeat-y scroll top center/contain;
 }
-#level_01 .row .row {
+#level_01 .backdrop {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -168,7 +181,7 @@ footer .h3 a {
   position: relative;
 }
 .tcard:hover {
-  transform: scale(2);
+  transform: scale(1.5);
   z-index: 1;
 }
 .tcard.tcard_gray {
