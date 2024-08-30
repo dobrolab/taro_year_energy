@@ -739,3 +739,18 @@ function convertToSub(card) {
 	return SubNumerals[card];
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим поле input по id "sname"
+    const inputField = document.getElementById('username');
+
+    // Добавляем обработчик события input
+    inputField.addEventListener('input', function() {
+        // Получаем все элементы с классом uname
+        const spanElements = document.querySelectorAll('span.uname');
+        
+        // Обновляем текст внутри каждого найденного элемента
+        spanElements.forEach(function(span) {
+            span.textContent = inputField.value;
+        });
+    });
+});
