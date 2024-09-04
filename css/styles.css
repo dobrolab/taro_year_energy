@@ -127,6 +127,7 @@ footer .h3 a {
 .btn_filter {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 60px;
 }
 .btn_filter a {
   color: #fff;
@@ -139,15 +140,26 @@ footer .h3 a {
 #level_01 .backdrop {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+}
+#level_01 .border_tlr {
+  color: #C7AB77;
 }
 
 .h3_month {
   font-family: "Viaoda Libre", serif;
-  color: #C7AB77;
-  font-size: 20px;
-  margin-top: 20px;
+  color: #fff;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-top: 0;
+  padding-right: 0;
+  text-align: right;
+}
+.h3_month .uname {
+  text-transform: none;
+  color: #C7AB77;
 }
 
 .table_cell {
@@ -229,6 +241,17 @@ footer .h3 a {
   margin-top: 300px;
 }
 
+@media (max-width: 992px) {
+  .h3_month {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+  }
+  .h3_month .uname {
+    display: inline-block;
+  }
+}
 @media (max-width: 767px) {
   #dainput {
     padding-bottom: 0;
