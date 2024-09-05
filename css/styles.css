@@ -135,7 +135,7 @@ footer .h3 a {
 }
 
 #level_01 .container {
-  background: transparent url("../img/taro_years_back.svg") repeat-y scroll top center/contain;
+  background: transparent url("../img/taro_years_back.svg") repeat scroll top center/contain;
 }
 #level_01 .backdrop {
   -webkit-backdrop-filter: blur(10px);
@@ -160,6 +160,12 @@ footer .h3 a {
 .h3_month .uname {
   text-transform: none;
   color: #C7AB77;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
 }
 
 .table_cell {

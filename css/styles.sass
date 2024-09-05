@@ -121,7 +121,7 @@ footer
 
 #level_01
 	.container
-		background: transparent url('../img/taro_years_back.svg') repeat-y scroll top center / contain
+		background: transparent url('../img/taro_years_back.svg') repeat scroll top center / contain
 
 	.backdrop
 		backdrop-filter: blur(10px)
@@ -144,6 +144,12 @@ footer
 	.uname
 		text-transform: none
 		color: $c1
+		hyphens: auto
+		hyphenate-limit-chars: 6 3 3
+		hyphenate-limit-lines: 2
+		hyphenate-limit-last: always
+		hyphenate-limit-zone: 8%
+
 
 .table_cell
 	border: 1px solid $c1
