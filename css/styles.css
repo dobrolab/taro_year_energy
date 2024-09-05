@@ -134,7 +134,7 @@ footer .h3 a {
   text-decoration: none;
 }
 
-#level_01 .container {
+#level_01 .container-fluid {
   background: transparent url("../img/taro_years_back.svg") repeat scroll top center/contain;
 }
 #level_01 .backdrop {
